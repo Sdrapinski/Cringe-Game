@@ -8,15 +8,20 @@ namespace cringegame
     {
         static void Main(string[] args)
         {
-            // wyswietlacz();
 
-            // NewGame.Nowagra();
-            Console.WriteLine(Funkcje.CzasReakcji());
+            Gra();
+           
+            
         }
-
+        public static void Gra()
+        {
+            wyswietlacz();
+            wyboropcji();
+        }
 
        public static void wyswietlacz()
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             
             Console.WriteLine(@"
        _________        .__                          ________                       
@@ -50,6 +55,25 @@ namespace cringegame
         |___/         \_/\_/ \_, |/ \__,_/__|
                               |__/__/         
 ");
+            Console.ResetColor();
+        }
+       public static void wyboropcji()
+        {
+           int wybor= Funkcje.ParseToInt("Wybierz opcje", 1, 3);
+            switch (wybor)
+            {
+                case 1:
+                    NewGame.Nowagra();
+                    break;
+                case 2:
+                    Wczytaj.Wczytywanie();
+                    break;
+                case 3:
+                    break;
+                default:
+                 NewGame.Nowagra();
+                    break;
+            }
         }
     }
     

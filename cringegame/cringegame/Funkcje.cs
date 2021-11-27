@@ -54,7 +54,7 @@ namespace cringegame
                 }
                 else
                 {
-                    Kolorek(ConsoleColor.Red, "Prosze wprowadzic liczbe ponownie!");
+                    Kolorek(ConsoleColor.Red, "Prosze wprowadzic POPRAWNĄ liczbe ponownie!");
                     continue;
                 }
             }
