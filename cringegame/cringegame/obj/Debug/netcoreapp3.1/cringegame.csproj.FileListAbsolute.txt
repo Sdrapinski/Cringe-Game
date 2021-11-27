@@ -1,0 +1,13 @@
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.exe
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.deps.json
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.runtimeconfig.json
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.runtimeconfig.dev.json
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.dll
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\bin\Debug\netcoreapp3.1\cringegame.pdb
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.csprojAssemblyReference.cache
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.AssemblyInfoInputs.cache
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.AssemblyInfo.cs
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.csproj.CoreCompileInputs.cache
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.dll
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.pdb
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.genruntimeconfig.cache
