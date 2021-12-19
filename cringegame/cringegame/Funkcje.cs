@@ -6,6 +6,8 @@ namespace cringegame
 {
     class Funkcje
     {
+        public static Random rnd = new Random();
+        
 
         public static void KolorujKonkretne(ConsoleColor color, string text, params object[] args)
         {
@@ -28,7 +30,7 @@ namespace cringegame
             }
         }
 
-        public static void Kolorek(ConsoleColor color, string message)    
+        public static void Kolorek(ConsoleColor color, string message)
         {
             // funkcja do wyswietlenia kolorowego textu
             Console.ForegroundColor = color;
@@ -38,18 +40,18 @@ namespace cringegame
             Console.ResetColor();
 
         }
-        public static int ParseToInt(string komunikat,int min=0,int max=999)
+        public static int ParseToInt(string komunikat, int min = 0, int max = 999)
         {
             // pobiera komunikat do wyswietlenia i opcjonalnie min oraz max 
             Console.WriteLine(komunikat);
-            bool czyok = false,czyliczba=false;
-            int wynik=0;
+            bool czyok = false, czyliczba = false;
+            int wynik = 0;
             while (!czyok)
             {
                 czyliczba = int.TryParse(Console.ReadLine(), out wynik);
-                if (czyliczba && ((wynik >=min && wynik <=max)||(min==0 && max==999)))
+                if (czyliczba && ((wynik >= min && wynik <= max) || (min == 0 && max == 999)))
                 {
-                    
+
                     return wynik;
                 }
                 else
@@ -59,7 +61,7 @@ namespace cringegame
                 }
             }
             return wynik;
-           
+
         }
         public static bool Timer(int sekund)
         {
@@ -75,9 +77,9 @@ namespace cringegame
         }
         public static long CzasReakcji()
         {
-            
+
             Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start(); 
+            stopwatch.Start();
             Console.WriteLine("kliknij");
             Console.ReadKey();
             stopwatch.Stop();
@@ -85,6 +87,45 @@ namespace cringegame
 
             return wynik;
         }
+
+        public static int losujzprzedzialu(int min,int max)
+        {
+             int numer = rnd.Next(min, max + 1);
+            return numer;
+         }
+
+        public static bool TakCzyNie(string powiadomienie)
+        {
+           
+            bool czyokej = false;
+            char wybor='0';
+            Kolorek(ConsoleColor.Blue, powiadomienie);
+            while (!czyokej)
+            {
+                wybor = Console.ReadKey().KeyChar;
+                if(wybor =='T' || wybor =='t' || wybor =='N' || wybor == 'n')
+                {
+                    czyokej = true;
+                }
+                else
+                {
+                    Kolorek(ConsoleColor.Red, powiadomienie);
+                }
+            }
+            if(wybor=='T' || wybor == 't')
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+          
+            
+        }
+       
+    }
+     
     }
 
-}
+

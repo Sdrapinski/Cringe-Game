@@ -16,12 +16,14 @@ namespace cringegame
     class Player : Person
     {
         public Player() { }
-        public Player(string imie,float hp)
+        public Player(string imie,float hp,int trudnosc)
         {
             this.imie = imie;
             this.hp = hp;
+            this.trudnosc = trudnosc;
             
         }
+        public int trudnosc;
         public string imie;
         public float hp;
        
