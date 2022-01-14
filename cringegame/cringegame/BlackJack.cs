@@ -13,7 +13,7 @@ namespace cringegame
             int wynik_komputer = Funkcje.losujzprzedzialu(17, 25 - player.trudnosc);
             Console.Clear();
             bool czyDalej = true;
-            Funkcje.Kolorek(ConsoleColor.Magenta, "Witaj w kolejnej grze tym razem to BlackJack zdobądz jak najblizej 21 ale nie przestrzeł  \nPo nacisnieciu klawisza rozpocznie sie gra");
+            Funkcje.Kolorek(ConsoleColor.Magenta, "Witaj w kolejnej grze tym razem to BlackJack zdobądz jak najblizej 21 ale nie przestrzel  \nPo nacisnieciu klawisza rozpocznie sie gra");
             char play = Console.ReadKey().KeyChar;
             Console.Clear();
             while (czyDalej)
@@ -21,7 +21,15 @@ namespace cringegame
                 int wylosowana =  Funkcje.losujzprzedzialu(2, 11);
                 if(wylosowana == 11)
                 {
-                    wynik += Funkcje.ParseToInt("Wylosowałeś ASA chcesz by był 1 czy 11 ? \n 1 - 1 \n 2 - 11", 1, 2);
+                   int wybor= Funkcje.ParseToInt("Wylosowałeś ASA chcesz by był 1 czy 11 ? \n 1 - 1 \n 2 - 11", 1, 2);
+                    if (wybor == 1)
+                    {
+                        wynik += 1;
+                    }
+                    else
+                    {
+                        wynik += 11;
+                    }
                 }else
                 {
                     wynik += wylosowana;

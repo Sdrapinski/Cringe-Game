@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading;
 
@@ -7,7 +8,7 @@ namespace cringegame
 {
     class Glowny 
     {
-        static public int numer=1;
+       
         static void Main(string[] args)
         {
 
@@ -19,7 +20,9 @@ namespace cringegame
         {
             wyswietlacz();
             Player player = wyboropcji();
-            for (int i = numer; i <= 3; i++)
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            for (int i = player.numer_gry; i <= 6; i++)
             {
                 switch (i)
                 {
@@ -33,10 +36,34 @@ namespace cringegame
                     case 3:
                         BlackJack.Rozgrywka(ref player);
                         break;
+                    case 4:
+                        Kulki.Gra(ref player);
+                        break;
+                    case 5:
+                        BudowanieMostu.Most(ref player);
+                        break;
+                    case 6:
+                        Bomba.GlownaGra(ref player);
+                       
+                        break;
                     default:
                         break;
                 }
                 info(player, i);
+                
+                if(player.hp == 0)
+                {
+                    player.hp = 25;
+                    Wczytaj.Zapisz(player, i);
+                    stopwatch.Stop();
+                    KoniecGry.TimerUpokorzenia(player.numer);
+                    break;
+                }
+                if(i == 6 && player.hp > 0)
+                {
+                    stopwatch.Stop();
+                    KoniecGry.TimerGratulacje(player.numer,player.trudnosc,stopwatch.ElapsedMilliseconds);
+                }
             }
            
            
@@ -56,7 +83,7 @@ namespace cringegame
        \     \____|  | \/  |   |  \/ /_/  >  ___/  \    \_\  \/ __ \|  Y Y  \  ___/ 
         \______  /|__|  |__|___|  /\___  / \___  >  \______  (____  /__|_|  /\___  >
                \/               \//_____/      \/          \/     \/      \/     \/ 
-
+                by Szymon Drapiński & Aleksander Chomicz
 
 ");
             Console.WriteLine(@"
@@ -91,11 +118,10 @@ namespace cringegame
                 case 1:
                   return  NewGame.Nowagra();   
                 case 2:
-                    numer = 2;
-                    return new Player("Wczytany", 50, 2);
-                        //Wczytaj.Wczytywanie();
+                    KoniecGry.wczytane = 600;
+                    return Wczytaj.Wczytywanie();
                 case 3:
-                    return new Player("Zakoncz", 0, 3);
+                    return new Player("Zakoncz", 0, 3,7);
                 default:
                 return NewGame.Nowagra();
                    
@@ -104,7 +130,7 @@ namespace cringegame
         public static void info(Player player,int nr)
         {
             Funkcje.KolorujKonkretne(ConsoleColor.Green, "Stan życia # numer gry #", player.hp, nr);
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
     }
     

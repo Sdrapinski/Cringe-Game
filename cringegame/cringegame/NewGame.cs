@@ -12,7 +12,7 @@ namespace cringegame
             string imie = Console.ReadLine();
             int[] poziom = new int[2];
             poziom = PoziomTrudnosci();
-            Player osoba = new Player(imie,poziom[0],poziom[1]);
+            Player osoba = new Player(imie,poziom[0],poziom[1],1);
             Console.Clear();
             Funkcje.KolorujKonkretne(ConsoleColor.Green, "Wiaj: # twój numer to: # Zaraz zacznie sie gra", osoba.imie, osoba.numer);
             Thread.Sleep(2000);
@@ -22,7 +22,7 @@ namespace cringegame
 
         public static int[] PoziomTrudnosci()
         {
-           int wybor= Funkcje.ParseToInt("Wybierz poziom trudnosci \n1-latwy 4 życia \n2- normlany 2 życia \n3-realistyczny 1 żyicie", 1, 3);
+           int wybor= Funkcje.ParseToInt("Wybierz poziom trudnosci \n1-latwy 4 życia \n2- normlany 2 życia \n3-ekspert 1 żyicie", 1, 3);
             Console.WriteLine(wybor);
             int[] wynik = new int[2];
             switch (wybor)
