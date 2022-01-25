@@ -29,9 +29,10 @@ namespace cringegame
                 int i = 0;
                 ArrayList Lista = new ArrayList();
                 Console.Clear();
+                Funkcje.Kolorek(ConsoleColor.Green, "LP Numer Imie HP P.Trudności Gra");
                 while ((s = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(i + "." + s);
+                    Console.WriteLine(i + 1 + "." + s);
                     // numer imie hp trudnosc gra
                     Lista.Add(s);
                     i++;

@@ -11,3 +11,4 @@ C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debu
 C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.dll
 C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.pdb
 C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.genruntimeconfig.cache
+C:\Users\Szymon\Desktop\szkoła\WSB\programowanie\cringegame\cringegame\obj\Debug\netcoreapp3.1\cringegame.GeneratedMSBuildEditorConfig.editorconfig
