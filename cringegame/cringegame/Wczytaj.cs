@@ -32,7 +32,7 @@ namespace cringegame
                 Funkcje.Kolorek(ConsoleColor.Green, "LP Numer Imie HP P.Trudności Gra");
                 while ((s = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(i + 1 + "." + s);
+                    Console.WriteLine(i  + "." + s);
                     // numer imie hp trudnosc gra
                     Lista.Add(s);
                     i++;
